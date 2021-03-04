@@ -1,0 +1,129 @@
+/* MovieDetailComponent's private CSS styles
+
+h2, h3
+  display: inline-flex
+  margin-bottom: 0
+
+h2
+  color: white
+
+h3
+  color: rgb(200, 200, 200)
+
+.movie-header
+  border-bottom: 1px solid gray
+  border-left: 1px solid gray
+  border-right: 1px solid gray
+  width: 100%
+  // height: 140px
+  padding: .5rem
+  margin: 0 auto
+  text-align: center
+  vertical-align: middle
+  box-sizing: border-box
+  text-decoration: none
+  font-weight: 500
+  background-color: rgb(52, 52, 52)
+  color: white
+
+  .rating
+    float: right
+    position: relative
+    margin-right: 20px
+    font-size: 20px
+
+    .stars
+      line-height: 0
+      margin-top: 10px
+
+      .checked
+        color: orange
+
+    span
+      font-size: 12px
+
+  .title-container
+    display: inline-block
+    text-align: center
+
+  .subtitles
+    display: flex
+    justify-content: space-between
+
+    p
+      color: rgb(200, 200, 200)
+      font-size: 12px
+
+    p.linebreak
+      color: rgb(150, 150, 150)
+
+.content-container
+  background-color: rgb(240, 240, 240)
+  display: inline-flex
+  position: relative
+  width: 100%
+
+  .movie-poster
+    width: auto
+    height: 100%
+
+  .movie-plot
+    padding: 1vw
+
+  .backbutton
+    background-color: rgb(52, 52, 52)
+    transition: all 1.0s
+    position: absolute
+    line-height: 40px
+    height: 40px
+    text-align: center
+    width: 200px
+    cursor: pointer
+    color: white
+    right: 2px
+    bottom: 2px
+
+    &:hover
+      background-color: rgba(255, 255, 255, 0)
+
+    span
+      z-index: 2
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 1
+      transition: all 1.0s
+      background-color: rgb(52, 52, 52)
+      border: 1px solid rgba(170, 170, 170, 0.5)
+
+    &:hover
+      color: white
+      &::before
+        transform: rotate(180deg)
+        background-color: rgb(52, 52, 52)
+
+      &::after
+        transform: rotate(-180deg)
+        background-color: rgb(52, 52, 52)
+
+@media (max-width: 588px)
+  .content-container
+    display: inline-block
+
+    .movie-poster
+      width: 100%
+      height: auto
+
+    .backbutton
+      position: relative
+      width: 99%
+      right: 0
